@@ -3,6 +3,11 @@
 
 int main(int argc, char **argv)
 {
+    if(argv[1] == NULL){
+        std::cout<<"orion: try 'orion -h' or 'orion --help' for more information"<<std::endl;
+        return 0;
+    }
+
     if(strcmp(argv[1], "-h")==0 ||strcmp(argv[1], "--help")==0){
         std::cout<<"usage: orion [options...]"<<std::endl;
         std::cout<<" -i, --install \tInstall orion"<<std::endl;
